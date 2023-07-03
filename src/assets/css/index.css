@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --text-primary: #1c1132;
+    --text-secondary: #7b7588;
+  }
+
+  *,
+  *::before,
+  *::after {
+    margin: unset;
+    padding: unset;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+
+  html,
+  body {
+    color: var(--text-primary);
+    overflow-x: hidden;
+  }
+}
+
+@layer utilities {
+  /* General utils */
+  .not--found {
+    @apply flex flex-col items-center justify-center h-screen text-white bg-slate-800;
+  }
+
+  .tr--container {
+    @apply container mx-auto;
+  }
+
+  .tr--section {
+    @apply py-24;
+  }
+  /* General utils end */
+
+  /* Flex Utilities */
+  .tr--flex-row-center {
+    @apply flex items-center justify-center;
+  }
+  .tr--flex-row-between {
+    @apply flex items-center justify-between;
+  }
+  /* End of Flex Utilities */
+
+  /* Buttons */
+  .btn {
+    @apply py-3 px-5 h-12 cursor-pointer rounded-full;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .btn.btn-sm {
+    @apply h-9 text-sm;
+  }
+
+  .btn.btn-lg {
+    @apply h-12;
+  }
+
+  /* Buttons end */
+}
+
+@layer components {
+}
